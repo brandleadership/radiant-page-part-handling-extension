@@ -6,6 +6,7 @@ class PagePartHandlingExtension < Radiant::Extension
   def activate
     SiteController.send :include, PagePartHandling::SiteControllerExtension
     ResponseCache.instance_eval { include PagePartHandling::ResponseCacheExtension }
+    Page.send :include, PagePartHandlingTags
   end
   
   def deactivate
