@@ -1,0 +1,15 @@
+= Page Part Handling
+
+The idea of this extension is to load page parts over url parameters.
+
+Example: http://www.mywebsite.ch/?part=extended
+
+There are two use cases to start with this extension:
+- a page that has several picture to scroll
+- render just a part for an ajax update
+
+So the extension has following funktions:
+- AjaxPage: Page type that renders url parameter "part" without layout if it is an ajax request
+- Tag contentByRequest: Renders url parameter "part" within layout
+
+To cache all this part the radiant cache is extended.
