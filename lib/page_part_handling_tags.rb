@@ -3,12 +3,12 @@ module PagePartHandlingTags
   include Radiant::Taggable
 
   desc %{
-    Renders the requested part in layout. Request "?part=[part]"
+    Renders the content of the part that has been requested by supplying the url parameter (?part=[name of the part])
     *Usage:*
 
-    <pre><code><r:contentByRequest [inherit="true|false"] [contextual="true|false"] /></code></pre>
+    <pre><code><r:content_requested [inherit="true|false"] [contextual="true|false"] /></code></pre>
   }
-  tag 'contentByRequest' do |tag|
+  tag 'requested_part' do |tag|
     part_name = request.parameters[:part];
 
     #Code from standard tag content
