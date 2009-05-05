@@ -40,6 +40,10 @@ This extension provides a new page type `AjaxPage`, whereas the page won't rende
 		});
 	});
 
+Multi Site
+----------
+This extension works together with the multi site extension. Important is that this extension is loaded after the multi site extension.
+
 Contributors
 ------------
 
