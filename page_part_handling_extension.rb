@@ -4,9 +4,7 @@ class PagePartHandlingExtension < Radiant::Extension
   url "http://www.screenconcept.ch"
 
   def activate
-    SiteController.send :include, PagePartHandling::SiteControllerExtension
-    ResponseCache.instance_eval { include PagePartHandling::ResponseCacheExtension }
-    Page.send :include, PagePartHandlingTags
+    Rack::Cache::Key.send :include, PagePartHandling::RackCacheKeyExtension
   end
   
   def deactivate
